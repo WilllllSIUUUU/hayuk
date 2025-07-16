@@ -1,0 +1,33 @@
+body, html {
+  margin: 0; padding: 0; overflow: hidden;
+  background: radial-gradient(circle at top, #ffccf9, #d5aaff);
+  font-family: 'Segoe UI', sans-serif;
+}
+#overlay {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(8px);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: space-between;
+  pointer-events: none;
+}
+#floating-text {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 8px #ff77e9;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+#btn-toggle-music {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem; font-size: 1rem;
+  background: rgba(255,255,255,0.8);
+  border: none; border-radius: 8px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+canvas { display: block; }
